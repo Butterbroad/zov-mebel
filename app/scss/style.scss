@@ -615,6 +615,7 @@
 //catalog start
 .catalog {
     background-color: $light;
+    overflow: hidden;
 
     &__subtitle {
         margin-bottom: 61px;
