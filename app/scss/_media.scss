@@ -799,7 +799,6 @@
     }
 
     .catalog {
-
         &__get {
             padding: 37px 0 47px;
         }
@@ -810,6 +809,9 @@
             }
 
             margin-bottom: 15px;
+        }
+        &__get-field {
+            margin-right: 0;
         }
 
         &__get-inner {
@@ -1494,7 +1496,13 @@
 
 
 
-
+@media (min-width: 1921px) {
+    .location {
+        &__inner {
+            justify-content: center;
+        }
+    }
+}
 
 @media (min-width: 767px) {
     .header__menu {

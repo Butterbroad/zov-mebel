@@ -615,7 +615,6 @@
 //catalog start
 .catalog {
     background-color: $light;
-    overflow: hidden;
 
     &__subtitle {
         margin-bottom: 61px;
@@ -1366,7 +1365,6 @@
 
     &__inner {
         display: flex;
-        justify-content: center;
     }
 
     &__map {
