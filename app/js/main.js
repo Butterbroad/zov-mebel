@@ -1,6 +1,7 @@
 $(document).ready(function () {
   $('.header__burger').click(function (event) {
     $('.header__burger, .header__menu_md, .header').toggleClass('active');
+    $('body').toggleClass('lock');
   });
 
   $('.catalog-item__slider, .production__slider, .feedbacks__slider').slick({
