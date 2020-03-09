@@ -371,126 +371,138 @@
         display: flex;
         flex-wrap: wrap;
     }
-
+    
     &__material-item {
         display: flex;
         flex-direction: column;
+        position: relative;
         margin-bottom: 19px;
         align-items: center;
-        margin-right: 28px;
-    }
+        margin-right: 20px;
 
+    }
     &__checkbox {
         appearance: none;
+        width: 0;
+        height: 0;
+        &:checked {
+            &+.calc-form__label {
+                &::after {
+                    opacity: 1;
+                }
+                span {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    &__label {
+        text-align: center;
+        max-width: 65px;
         position: relative;
-        border-radius: 50%;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 160%;
+
+        span {
+            &::before {
+               content: '';
+               width: 25px;
+               height: 19px;
+               display: block;
+               background-image: url(../img/intro/check.svg);
+               position: absolute;
+               top: 20px;
+               left: 20px;
+               background-repeat: no-repeat;
+               background-size: cover;
+               background-position: center;
+               opacity: 0;
+               transition: all .3s ease;
+            }
+        }
 
         &::before {
             content: '';
             display: block;
             width: 61px;
             height: 61px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+            background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
         }
-
         &::after {
             content: '';
-            width: 61px;
-            height: 61px;
+            display: block;
             border-radius: 50%;
-            background-color: rgba(255, 255, 255, .3);
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 64px;
+            height: 64px;
             position: absolute;
             top: 0;
             left: 0;
             opacity: 0;
             transition: all .3s ease;
         }
-
-        &:checked {
+        &_1 {
+            &::before {
+                background-image: url(../img/intro/form1.png);
+            }
+        }
+        &_2 {
+            &::before {
+                background-image: url(../img/intro/form2.png);
+            }
+        }
+        &_3 {
+            &::before {
+                background-image: url(../img/intro/form3.png);
+            }
+        }
+        &_4 {
+            &::before {
+                background-image: url(../img/intro/form4.png);
+            }
+        }
+        &_5 {
+            &::before {
+                background-image: url(../img/intro/form5.png);
+            }
+        }
+        &_6 {
+            &::before {
+                background-image: url(../img/intro/form6.png);
+            }
+        }
+        &_7 {
+            &::before {
+                content: '?';
+                display: block;
+                width: 61px;
+                height: 61px;
+                border-radius: 50%;
+                background-color: $yellow;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 28px;
+                color: #fff;
+            }
+    
             &::after {
-                opacity: 1;
+                content: '';
+                display: block;
+                width: 61px;
+                height: 61px;
+                border-radius: 50%;
+    
             }
-
-            &+.calc-form__label {
-                &::before {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-
-    &__checkbox_1 {
-        background-image: url(../img/intro/form1.png);
-    }
-
-    &__checkbox_2 {
-        background-image: url(../img/intro/form2.png);
-    }
-
-    &__checkbox_3 {
-        background-image: url(../img/intro/form3.png);
-    }
-
-    &__checkbox_4 {
-        background-image: url(../img/intro/form4.png);
-    }
-
-    &__checkbox_5 {
-        background-image: url(../img/intro/form5.png);
-    }
-
-    &__checkbox_6 {
-        background-image: url(../img/intro/form6.png);
-    }
-
-    &__checkbox_7 {
-        &::before {
-            content: '?';
-            display: block;
-            width: 61px;
-            height: 61px;
-            border-radius: 50%;
-            background-color: $yellow;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            color: #fff;
-        }
-
-        &::after {
-            content: '';
-            display: block;
-            width: 61px;
-            height: 61px;
-            border-radius: 50%;
-
-        }
-    }
-
-    &__label {
-        font-size: 16px;
-        font-weight: 300;
-        margin-top: 7px;
-        position: relative;
-        line-height: 80%;
-
-        &::before {
-            content: '';
-            width: 25px;
-            height: 19px;
-            background: url(../img/intro/check.svg);
-            position: absolute;
-            left: 50%;
-            margin-left: -12.5px;
-            top: -45px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0;
-            transition: all .3s ease;
         }
     }
 
@@ -1098,13 +1110,32 @@
             max-width: 100%;
         }
     }
-
+    &__video-start {
+        &:hover {
+            .production__play {
+                path {
+                    fill: #fff;
+                }
+                circle {
+                    stroke:#fff;
+                }
+            }
+        }
+    }
     &__play {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: transparent;
+        path {
+            fill: rgba(255,255,255,.6);
+            transition: all .3s ease;
+        }
+        circle {
+            stroke: rgba(255,255,255,.6);
+            transition: all .3s ease;
+        }
     }
 
     &__text {

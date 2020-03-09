@@ -61,6 +61,10 @@ select::-ms-expand {
     display: none;
 }
 
+input::-ms-clear { 
+    display: none; 
+}
+
 button {
     outline: none;
     border: none;
