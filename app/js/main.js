@@ -157,6 +157,10 @@ $(document).ready(function () {
       tel: {
         required: "Укажите, пожалуйста, номер телефона",
       }
+    },
+    submitHandler: function () {
+      const succesModal = document.querySelector('#succes-modal');
+      succesModal.style.display = "block";
     }
   });
 

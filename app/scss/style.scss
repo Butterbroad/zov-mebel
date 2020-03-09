@@ -1242,6 +1242,7 @@
         transition: all .3s ease;
         &:hover {
             transform: scale(1.2);
+            z-index: 100;
         }
 
     }
