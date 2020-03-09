@@ -25,7 +25,7 @@
     }
 
     &__logo {
-        margin-right: 75px;
+        margin-right: 72px;
 
         svg {
             display: block;
@@ -39,6 +39,7 @@
 
         &_md {
             display: none;
+            overflow: auto;
         }
     }
 
@@ -131,11 +132,6 @@
     background-repeat: no-repeat;
     padding: 60px 0 68px;
     position: relative;
-
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-    }
 
     &__box {
         position: relative;
@@ -514,11 +510,15 @@
 
             &:focus {
                 border-color: $yellow;
+                &::placeholder {
+                    visibility: hidden;
+                    font-size: 0;
+                }
             }
 
             &::placeholder {
                 font-size: 18px;
-                line-height: 20px;
+                line-height: 46px;
                 color: #959595;
                 font-weight: 300;
             }
@@ -544,6 +544,7 @@
             font-size: 18px;
             line-height: 80%;
             color: $blue;
+            
         }
     }
 
@@ -589,9 +590,10 @@
             width: 100%;
             padding: 0 12px;
 
+            
             &::placeholder {
                 font-size: 18px;
-                line-height: 20px;
+                line-height: 46px;
                 color: #959595;
                 font-weight: 300;
             }
@@ -1206,6 +1208,10 @@
 
     &__item {
         flex: 0 1 355px;
+        transition: all .3s ease;
+        &:hover {
+            transform: scale(1.2);
+        }
 
     }
 
@@ -1421,13 +1427,6 @@
     position: relative;
     background-color: $blue;
 
-    &__inner {
-        min-height: 140px;
-        display: flex;
-        align-items: center;
-
-    }
-
     &__burger {
         display: none;
     }
@@ -1435,10 +1434,11 @@
     &__content {
         display: flex;
         align-items: center;
+        height: 140px;
     }
 
     &__logo {
-        margin-right: 75px;
+        margin-right: 72px;
 
         path {
             fill: #fff;
@@ -1492,6 +1492,7 @@
         max-width: 570px;
         width: 100%;
         object-fit: none;
+        flex-shrink: 0;
 
         img {
             display: block;
@@ -1575,7 +1576,7 @@
 
 .mfp-close {
     font-size: 38px;
-    color: #959595;
+    color: #959595 !important;
 }
 
 .calc {

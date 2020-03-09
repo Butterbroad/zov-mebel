@@ -13,8 +13,9 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
+
 body.lock {
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 a {
@@ -40,11 +41,13 @@ li {
 }
 
 input {
+    position: relative;
     font-size: 18px;
 
     &:focus {
         &::placeholder {
             visibility: hidden;
+            font-size: 0;
         }
     }
 }
@@ -52,6 +55,10 @@ input {
 input,
 select {
     outline: none;
+}
+
+select::-ms-expand {
+    display: none;
 }
 
 button {

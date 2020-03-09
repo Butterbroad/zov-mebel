@@ -995,6 +995,7 @@
             max-width: 310px;
             width: 100%;
             margin: 0 auto;
+            position: relative;
         }
 
         .modal-form__subtitle {
@@ -1190,6 +1191,9 @@
         &__item {
             max-width: 100%;
             width: 100%;
+            &:hover {
+                transform: scale(1);
+            }
 
         }
 
