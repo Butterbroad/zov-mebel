@@ -183,6 +183,15 @@ $(document).ready(function () {
   });
 
 
+  $(".menu-list").on("click","a", function (event) {
+            event.preventDefault();
+            var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1000);
+        });
+    
+
+
 });
 
 
@@ -203,20 +212,6 @@ window.addEventListener('click', function () {
   succesModal.style.display = "none";
 });
 
-const anchors = document.querySelectorAll('a[href*="#"]')
-
-for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    
-    const blockID = anchor.getAttribute('href').substr(1)
-    
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  });
-}
 
 
 

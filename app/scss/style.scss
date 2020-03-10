@@ -1062,13 +1062,15 @@
     background-repeat: no-repeat;
 
     &__title {
-        margin: 0 auto;
         margin-bottom: 16px;
         max-width: 440px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: inline-block;
+    }
 
+    &__title-box {
+        display: flex;
+        justify-content: center;
+        
         span {
             margin-left: 20px;
             padding-top: 5px;

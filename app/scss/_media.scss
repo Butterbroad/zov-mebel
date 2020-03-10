@@ -311,6 +311,17 @@
         width: 100%;
         margin: 0 auto;
     }
+    .production {
+        &__title-box {
+            span {
+
+                svg {
+                    width: 60px;
+                    height: 54px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1179px) {
@@ -934,9 +945,6 @@
         &__title {
             font-size: 30px;
 
-            span {
-                display: block;
-            }
         }
 
         &__subtitle {
@@ -1059,7 +1067,10 @@
         &__title {
             margin-bottom: 20px;
             display: block;
-
+            
+        }
+        
+        &__title-box {
             span {
                 margin-left: 5px;
 
